@@ -1,0 +1,34 @@
+words = {}
+
+while True:
+  print("welcome to dictionary")
+  print("1. add/update a new word")
+  print("2. retrieve a word")
+  print("3. view all words")
+  print("4. delete a word")
+  
+  choice = int(input("pick an option from 1 to 4"))
+  
+  if choice==1:
+    key = input("enter a word")
+    value = input("enter its meanining")
+    words[key] = value
+    print(words)
+    
+  elif choice==2:
+    retrieve = input("which word would you like to retrive")
+    print(words[retrieve])
+    
+  elif choice==3:
+   if len(words)==0:
+     print("The dictionary is empty")
+   else:
+     print(words)
+    
+  elif choice==4:
+    delete = input("which word would you like to delete")
+    if delete in words:
+      words.pop(delete)
+      print(words)
+    else:
+      print("word has not been found")
