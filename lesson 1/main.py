@@ -16,7 +16,7 @@ message = ("")
 def draw():
     screen.fill("dark blue")
     alien.draw()
-    screen.draw.text(message,color = "white",center = (60,150),fontsize = 50)
+    screen.draw.text(message,color = "white",center = (120,150),fontsize = 50)
     # plane.draw()
     # orange.draw()
     # wood.draw()

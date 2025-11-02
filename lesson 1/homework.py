@@ -1,8 +1,5 @@
 import pgzrun 
 
-WIDTH = 1000
-HEIGHT = 1000
-
 
 
 wood = Actor('wood')       
@@ -18,9 +15,9 @@ orange.pos = (650, 300)
 def draw():
     screen.clear()
     screen.fill((0, 0, 30))  
-    screen.draw.text("Click a character to hear their favourite phrase!", (100, 50), color="white", fontsize=40)
+    screen.draw.text("favorite dialogue!", (100, 50), color="white", fontsize=40)
 
-    
+
     wood.draw()
     plane.draw()
     orange.draw()
@@ -32,24 +29,26 @@ def draw():
 
 def draw():
     screen.clear()
-    screen.fill((0, 0, 30)) 
+    screen.fill((0, 0, 30))  
     screen.draw.text("click and hear them", (100, 50), color="white", fontsize=40)
 
-    wood.draw()
-    plane.draw()
-    orange.draw()
+    tung.draw()
+    trala.draw()
+    odin.draw()
 
     if dialogue:
         screen.draw.text(dialogue, center=(400, 500), color="yellow", fontsize=36)
 
 def on_mouse_down(pos):
     global dialogue
-    if wood.collidepoint(pos):
+    if tung.collidepoint(pos):
         dialogue = "Tung Tung Tung Sahhur "
-    elif plane.collidepoint(pos):
-        dialogue = "bombbordillo crocodillo "
-    elif orange.collidepoint(pos):
+    elif trala.collidepoint(pos):
+        dialogue = "bombbordillo"
+    elif odin.collidepoint(pos):
         dialogue = "odin din din din dun"
     else:
         dialogue = "" 
 
+
+pgzrun.go()

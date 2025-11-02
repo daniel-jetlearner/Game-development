@@ -9,19 +9,19 @@ while True:
   
   choice = int(input("pick an option from 1 to 4"))
   
-  if choice==1:
+  if choice=1:
     key = input("enter a word")
     value = input("enter its meanining")
     words[key] = value
     print(words)
     
   elif choice==2:
-    retrieve = input("which word would you like to retrive")
-    print(words[retrieve])
+    redeem = input("which word would you like to redeem")
+    print(words[redeem])
     
   elif choice==3:
    if len(words)==0:
-     print("The dictionary is empty")
+     print("The dictionary is clear")
    else:
      print(words)
     
@@ -31,4 +31,4 @@ while True:
       words.pop(delete)
       print(words)
     else:
-      print("word has not been found")
+      print("word is not in dictionary")
